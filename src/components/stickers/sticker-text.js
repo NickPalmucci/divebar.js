@@ -5,8 +5,7 @@ import InsertEmoticon from '@material-ui/icons/InsertEmoticon';
 
 export default (props) => {
     const inputStyle = {
-        display: "block",
-        width: '100%'
+        display: "block"
     };
 
     const { setAppState, stickerText, showEmoji } = props;
