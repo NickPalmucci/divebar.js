@@ -3,12 +3,13 @@ import InputColor from 'react-input-color';
 
 const containerStyle = {
     display: 'flex',
+    flexDirection: 'column'
 };
 
 const pickerStyle = {
     display: 'flex',
     flexDirection: 'column',
-    padding: '1rem',
+    padding: '0.5rem 1rem',
     alignItems: 'center'
 };
 
@@ -22,7 +23,7 @@ export default (props) => {
                     initialHexColor={props.stickerTextColor}
                     onChange={(color)=>{props.setAppState({stickerTextColor: color.hex})}}
                 />
-                <p>Text</p>
+                <span>Text</span>
             </div>
 
             <div style={pickerStyle}>
@@ -30,7 +31,7 @@ export default (props) => {
                     initialHexColor={props.stickerBackgroundColor}
                     onChange={(color)=>{props.setAppState({stickerBackgroundColor: color.hex})}}
                 />
-                <p>Background</p>
+                <span>Background</span>
             </div>
 
         </div>
