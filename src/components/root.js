@@ -11,12 +11,12 @@ class App extends React.Component {
         modal: false,
         stickerSize: 'small',
         stickerHeight: 100,
-        stickerWidth: 200,
+        stickerWidth: 100,
         stickerText: '',
         stickerFont: 'Arial',
-        stickerTextSize: 12,
-        stickerTextColor: '#5e72e4',
-        stickerBackgroundColor: '#5e72e4',
+        stickerFontSize: 12,
+        stickerTextColor: '#000000',
+        stickerBackgroundColor: '#ffffff',
         showEmoji: false
     };
 
