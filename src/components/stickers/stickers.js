@@ -2,7 +2,7 @@ import React from 'react';
 import Canvas from './sticker-canvas';
 import StickerSizes from './sticker-sizes';
 import StickerFonts from './sticker-fonts';
-import {StickerFontSize} from './sticker-fonts';
+import {StickerFontSize, StickerLineHeight} from './sticker-fonts';
 import StickerText from './sticker-text';
 import StickerColors from './sticker-colors';
 import StickerEmoji from './sticker-emoji';
@@ -27,7 +27,7 @@ const optionsStyle = {
     flexDirection: 'column',
 };
 
-export default class Sticker extends React.Component {
+export default class StickerMaker extends React.Component {
 
     render () {
 
@@ -44,6 +44,7 @@ export default class Sticker extends React.Component {
 
                     <Canvas
                         appState={appState}
+                        setAppState={setAppState}
                     />
 
                     <StickerText
@@ -65,6 +66,11 @@ export default class Sticker extends React.Component {
                         stickerFontSize={appState.stickerFontSize}
                     />
 
+                    <StickerLineHeight
+                        setAppState={setAppState}
+                        stickerLineHeight={appState.stickerLineHeight}
+                    />
+
                     <StickerColors
                         setAppState={setAppState}
                         stickerTextColor={appState.stickerTextColor}
@@ -78,6 +84,7 @@ export default class Sticker extends React.Component {
                     />
 
                 </div>
+
 
             </div>
         )
