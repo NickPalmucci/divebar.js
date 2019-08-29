@@ -24,11 +24,25 @@ export const StickerFontSize = (props) => {
 
     return (
         <TextField
-            style={{width: '75px', alignSelf: 'center'}}
+            style={{width: '87px', alignSelf: 'center'}}
             type="number"
             value={stickerFontSize}
             label="Font Size"
             onChange={event => setAppState({stickerFontSize: event.target.value})}
+        />
+    )
+};
+
+export const StickerLineHeight = (props) => {
+    const {stickerLineHeight, setAppState} = props;
+
+    return (
+        <TextField
+            style={{width: '87px', alignSelf: 'center'}}
+            type="number"
+            value={stickerLineHeight}
+            label="Line Height"
+            onChange={event => setAppState({stickerLineHeight: event.target.value})}
         />
     )
 };
